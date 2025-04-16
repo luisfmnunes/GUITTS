@@ -10,7 +10,7 @@ class AudioPlayer:
         self.player.setAudioOutput(self.output)
 
     def load(self, path: Path):
-        self.player.setSource(QUrl.fromLocalFile(path.absolute()))
+        self.player.setSource(QUrl.fromLocalFile(path.absolute().as_posix()))
     
     def play(self):
         self.player.play()
